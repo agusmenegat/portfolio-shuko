@@ -845,10 +845,13 @@ section,
 .gallery .gallery-item {
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
+  height: 250px; /* altura fija deseada para todas las imágenes */
 }
 
 .gallery .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* mantiene proporción y recorta lo que sobra */
   transition: 0.3s;
 }
 
