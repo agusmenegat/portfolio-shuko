@@ -15,7 +15,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=UnifrakturMaguntia&family=Great+Vibes&display=swap"
     rel="stylesheet">
 
   <!-- Vendor CSS Files -->
@@ -49,10 +49,10 @@
                 class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="gallery.html">Diseños disponibles</a></li>
-              <li><a href="gallery-tattoos.html">Tatuajes realizados</a></li>
+              <li><a href="gallery-tattoos.html">Trabajos realizados</a></li>
             </ul>
           </li>
-          <li><a href="services.html">Servicios</a></li>
+          <li><a href="shop.html">Shop</a></li>
           <li><a href="contact.html" class="active">Contacto</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -87,27 +87,27 @@
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
                   <h3>Ubicación</h3>
-                  <p>Calle Ficticia 123, Nueva York, NY 535022</p>
+                  <p>CABA y La Plata, Argentina</p>
                 </div>
               </div>
             </div><!-- End Info Item -->
 
             <div class="col-lg-4">
               <div class="info-item d-flex align-items-center">
-                <i class="bi bi-telephone flex-shrink-0"></i>
+                <i class="bi bi-instagram flex-shrink-0"></i>
                 <div>
-                  <h3>Teléfono</h3>
-                  <p>+1 5589 55488 55</p>
+                  <h3>Instagram</h3>
+                  <p><a href="https://www.instagram.com/shuko.tatts/" target="_blank">@shuko.tatts</a></p>
                 </div>
               </div>
             </div><!-- End Info Item -->
 
             <div class="col-lg-4">
               <div class="info-item d-flex align-items-center">
-                <i class="bi bi-envelope flex-shrink-0"></i>
+                <i class="bi bi-clock flex-shrink-0"></i>
                 <div>
-                  <h3>Email</h3>
-                  <p>info@ejemplo.com</p>
+                  <h3>Respuesta</h3>
+                  <p>Dentro de las 48 hs hábiles</p>
                 </div>
               </div>
             </div><!-- End Info Item -->
@@ -115,31 +115,75 @@
           </div>
         </div>
 
+        <div class="intro-text" data-aos="fade-up" data-aos-delay="250">
+          <h3>Agendá tu cita</h3>
+          <p>Completá el formulario con los detalles de tu idea y te respondo a la brevedad para coordinar presupuesto y fecha. Todos los tatuajes incluyen una consulta previa sin cargo.</p>
+        </div>
+
         <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="300">
           <div class="row gy-4">
 
             <div class="col-md-6">
-              <input type="text" name="name" class="form-control" placeholder="Tu Nombre" required="">
+              <input type="text" name="name" class="form-control" placeholder="Nombre completo" required="">
             </div>
 
-            <div class="col-md-6 ">
-              <input type="email" class="form-control" name="email" placeholder="Tu Email" required="">
+            <div class="col-md-6">
+              <input type="email" class="form-control" name="email" placeholder="Email" required="">
+            </div>
+
+            <div class="col-md-6">
+              <input type="tel" class="form-control" name="phone" placeholder="Teléfono / WhatsApp">
+            </div>
+
+            <div class="col-md-6">
+              <label for="preferred_date" class="form-label" style="font-size:13px;color:color-mix(in srgb,var(--default-color),transparent 50%)">Fecha preferida para la cita</label>
+              <input type="date" class="form-control" id="preferred_date" name="preferred_date" aria-label="Fecha preferida para la cita">
+            </div>
+
+            <div class="col-md-6">
+              <select class="form-control" name="tattoo_style">
+                <option value="" disabled selected>Tipo de tatuaje / estilo deseado</option>
+                <option value="blackwork">Blackwork</option>
+                <option value="linework">Linework</option>
+                <option value="dotwork">Dotwork</option>
+                <option value="coverup">Cover-up</option>
+                <option value="otro">Otro (indicar en descripción)</option>
+              </select>
+            </div>
+
+            <div class="col-md-6">
+              <select class="form-control" name="tattoo_size">
+                <option value="" disabled selected>Tamaño aproximado</option>
+                <option value="pequeño">Pequeño (menos de 5 cm)</option>
+                <option value="mediano">Mediano (5–15 cm)</option>
+                <option value="grande">Grande (15–30 cm)</option>
+                <option value="muy-grande">Muy grande (más de 30 cm)</option>
+              </select>
             </div>
 
             <div class="col-md-12">
-              <input type="text" class="form-control" name="subject" placeholder="Asunto" required="">
+              <input type="text" class="form-control" name="body_location" placeholder="Ubicación en el cuerpo (ej: antebrazo, espalda, tobillo)">
             </div>
 
             <div class="col-md-12">
-              <textarea class="form-control" name="message" rows="6" placeholder="Mensaje" required=""></textarea>
+              <textarea class="form-control" name="message" rows="6" placeholder="Descripción del diseño: contame tu idea, referencias, colores, detalles importantes..." required=""></textarea>
+            </div>
+
+            <div class="col-md-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="budget_ok" id="budgetCheck">
+                <label class="form-check-label" for="budgetCheck">
+                  Acepto recibir un presupuesto estimado sin compromiso de compra
+                </label>
+              </div>
             </div>
 
             <div class="col-md-12 text-center">
               <div class="loading">Cargando</div>
               <div class="error-message"></div>
-              <div class="sent-message">Tu mensaje ha sido enviado. ¡Gracias!</div>
+              <div class="sent-message">Tu mensaje ha sido enviado. ¡Gracias! Te responderé a la brevedad.</div>
 
-              <button type="submit">Enviar Mensaje</button>
+              <button type="submit">Enviar solicitud de cita</button>
             </div>
 
           </div>
@@ -159,10 +203,7 @@
         </p>
       </div>
       <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
         <a href="https://www.instagram.com/shuko.tatts/" target="_blank"><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
       </div>
       <div class="credits">
         Diseñada por desarrollador Agustin Menegat
