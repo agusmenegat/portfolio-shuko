@@ -11,9 +11,6 @@
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-
 :root {
   --default-font: 'Manrope', sans-serif;
   --heading-font: 'UnifrakturMaguntia', cursive;
